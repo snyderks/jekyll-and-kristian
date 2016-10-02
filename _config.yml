@@ -12,7 +12,7 @@ my_name: Kristian
 # Build settings
 markdown: kramdown
 theme: minima
-exclude: [README.md, .gitignore]
+exclude: [README.md, .gitignore, s3_website.yml, Gemfile, Gemfile.lock]
 
 collections:
 - jobs

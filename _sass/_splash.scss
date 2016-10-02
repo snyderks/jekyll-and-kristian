@@ -45,7 +45,7 @@ $mobile-header-height: 600px;
   margin-bottom: 10%;
   @include body-width();
   font-weight: $header-font-weight;
-  text-shadow: 1px 2px 1px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
   a {
     color: $header-font-color;
     border-bottom: 1px solid $header-font-color;
@@ -62,9 +62,8 @@ $mobile-header-height: 600px;
 }
 
 .job {
-  flex: 1 1 50%;
+  flex: 1 0 50%;
   padding: 1em;
-  min-width: 345px;
 }
 
 .job-company-container {

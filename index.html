@@ -29,7 +29,7 @@
         {% for project in projects %}
           <div class="project">
             <div class="project-text">
-              <h1 class="project-title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
+              <h1 class="project-title"><a href="{{ project.project-url }}">{{ project.title }}</a></h1>
               <h3 class="project-stack">{{ project.stack }}</h3>
             </div>
             <img src="{{ project.image }}" class="project-image">

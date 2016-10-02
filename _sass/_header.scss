@@ -80,3 +80,12 @@ header {
     font-size: 16px * 1.2;
   }
 }
+
+@media (max-width: 470px) {
+  .navbar {
+    display: none;
+  }
+  header {
+    justify-content: center;
+  }
+}

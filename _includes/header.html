@@ -1,0 +1,21 @@
+<header>
+  <div class="left-logo">
+    <span class="top-left-logo">K</span>
+    <span class="middle-slash">／</span>
+    <span class="bottom-right-logo">S</span>
+  </div>
+  <ul class="navbar">
+    <li class="nav-item">{% if page.url == "/" %}<a href="#projects">
+                         {% else %}<a href="{{site.url}}{{site.baseurl}}#projects">
+                         {% endif %}
+                         Projects</a></li>
+    <li class="nav-item">{% if page.url == "/" %}<a href="#experience">
+                         {% else %}<a href="{{site.url}}{{site.baseurl}}#experience">
+                         {% endif %}
+                         Experience</a></li>
+    <li class="nav-item">{% if page.url == "/" %}<a href="#contact">
+                         {% else %}<a href="{{site.url}}{{site.baseurl}}#contact">
+                         {% endif %}
+                         Contact</a></li>
+  </ul>
+</header>

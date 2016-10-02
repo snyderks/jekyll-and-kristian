@@ -1,0 +1,83 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en-US">
+
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+
+<div class="hero-container"></div>
+<div class="hero-overlay">
+  <div class="hero-text">
+    <h1>Hi, I'm Kristian.</h1>
+    <p class="about">
+      {% include about-me-short.html %}
+    </p>
+  </div>
+</div>
+
+<div class="page-content">
+  <a name="projects"></a>
+  <div class="dark-container">
+    <div class="body-width-container">
+      <h1 class="projects-header">Projects</h1>
+      <div class="flex-container-space-between">
+        {% assign projects = site.projects | sort: 'sort-order' %}
+        {% for project in projects %}
+          <div class="project">
+            <div class="project-text">
+              <h1 class="project-title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
+              <h3 class="project-stack">{{ project.stack }}</h3>
+            </div>
+            <img src="{{ project.image }}" class="project-image">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="light-container">
+    <div class="body-width-container">
+      <h1 class="section-header"><a name="experience"></a>Experience</h1>
+      <div class="flex-container-space-between">
+      {% assign jobs = site.jobs | sort: 'start-date' | reverse %}
+      {% for job in jobs %}
+        <div class="job">
+          <h3 class="job-company">{{job.company}}</h3>
+          <div class="flex-container-space-between job-company-container">
+            <span class="flex-child"><span><h6 class="job-title">{{job.title}}</h6></span>
+            <span class="flex-child" class="job-time">{{job.time}}</span>
+          </div>
+          <hr>
+          <h5 class="tools-header">Tools/Languages</h5>
+          <div class="flex-container-left">
+
+            {% for tool in job.tools %}
+              <span class="job-tool">
+                {{tool}}
+              </span>
+            {% endfor %}
+          </div>
+          <p class="job-description">{{job.output}}</p>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="dark-container">
+    <div class="body-width-container">
+      <a name="contact"></a>
+      <p>
+        {% include contact-me.html %}
+      </p>
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
+
+</body>
+
+</html>

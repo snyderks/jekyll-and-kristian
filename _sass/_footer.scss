@@ -1,0 +1,98 @@
+$footer-background-color: rgba(90, 145, 232, 1);
+
+footer {
+  min-height: 200px;
+  background-color: $footer-background-color;
+  color: $header-font-color;
+  display: flex;
+  justify-content: center;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+
+  small {
+    color: rgba(255,255,255,0.8);
+  }
+  a {
+    color: inherit;
+    font-size: inherit;
+  }
+}
+
+.copyright {
+  width: 100%;
+  text-align: right;
+  font-size: $base-font-size * 0.9;
+}
+
+.left-footer {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.jekyll {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.jekyll * {
+  align-self: center;
+}
+
+.jekyll-logo {
+  height: $base-font-size * 1.5;
+  margin-left: 5px;
+}
+
+.footer-container {
+  @include body-width();
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-nav {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.nav-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav-item:first-child {
+  margin-left: 0px;
+}
+
+.nav-item:last-child {
+  margin-right: 0px;
+}
+
+.nav-item + .nav-item::before {
+  position: absolute;
+  left: -15px;
+  top: 5%;
+  content: "";
+  width: 1px;
+  height: 90%;
+  background-color: $header-font-color;
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 489px) {
+  .copyright {
+    text-align: left;
+  }
+  .jekyll {
+    justify-content: flex-start;
+  }
+}

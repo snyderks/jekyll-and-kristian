@@ -1,0 +1,82 @@
+$header-margin: 10%;
+
+header {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid white;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+  color: $header-font-color;
+  z-index: 10;
+  text-shadow: 1px 2px 0px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 700px) {
+  header {
+    width: 95%;
+    left: 2.5%;
+  }
+}
+
+.left-logo {
+  align-self: center;
+  position: relative;
+  font-size: $base-font-size * 1.2;
+}
+
+.top-left-logo {
+  position: absolute;
+  top: $base-font-size * 0.4;
+  left: 0;
+}
+
+.middle-slash {
+  font-weight: 300;
+  font-size: $base-font-size * 2.5;
+  margin: $base-font-size $base-font-size * 0.1;
+}
+
+.bottom-right-logo {
+  position: absolute;
+  bottom: $base-font-size * 0.4;
+  right: 0;
+}
+
+.navbar {
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-size: $base-font-size * 1.2;
+  font-weight: $header-font-weight;
+}
+
+.nav-item {
+  margin: 0;
+  margin-right: 10px;
+  list-style-type: none;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: inherit;
+  }
+}
+
+.nav-item:first-child {
+  margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    font-size: 16px * 1.2;
+  }
+}

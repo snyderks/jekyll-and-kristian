@@ -66,8 +66,8 @@ $mobile-header-height: 600px;
 }
 
 .job {
-  -webkit-flex-basis: 50%;
-  flex: 1 0 50%;
+  -webkit-flex-basis: 250px;
+  flex: 1 0 250px;
   padding: 1em;
 }
 
@@ -142,9 +142,8 @@ $mobile-header-height: 600px;
 }
 
 .project {
-  -webkit-flex-basis: 33%;
-  flex: 1 0 33%;
-  min-width: 250px;
+  -webkit-flex-basis: 250px;
+  flex: 1 0 250px;
   align-self: flex-start;
   margin: 15px;
   position: relative;

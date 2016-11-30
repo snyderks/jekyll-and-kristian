@@ -3,7 +3,7 @@ email: snyderkristian@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   DESCRIPTION!
 baseurl: / # the subpath of your site, e.g. /blog
-url: "http://www.kristiansnyder.com" # the base hostname & protocol for your site
+url: "https://www.kristiansnyder.com" # the base hostname & protocol for your site
 twitter_username: kristian_snyder
 github_username:  snyderks
 spotify_profile: https://open.spotify.com/user/knsnyder96

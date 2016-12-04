@@ -4,6 +4,16 @@
 
 @import 'https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500';
 
+html {
+  -webkit-font-variant-ligatures: none;
+  -moz-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  -webkit-font-feature-settings: 'liga' 0, 'onum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'liga' 0, 'onum' 1, 'kern' 1;
+  -o-font-feature-settings: 'liga' 0, 'onum' 1, 'kern' 1;
+  font-feature-settings: 'liga' 0, 'onum' 1, 'kern' 1;
+}
+
 * {
   box-sizing: border-box;
 }

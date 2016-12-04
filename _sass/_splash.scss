@@ -32,7 +32,7 @@ $mobile-header-height: 600px;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;    
+  display: flex;
 }
 
 @media(max-height: 600px){
@@ -68,6 +68,7 @@ $mobile-header-height: 600px;
 .job {
   -webkit-flex-basis: 250px;
   flex: 1 0 250px;
+  max-width: 500px;
   padding: 1em;
 }
 
@@ -76,6 +77,7 @@ $mobile-header-height: 600px;
 }
 
 .dark-container {
+  box-shadow: inset 0px 3px 7px black;
   background-color: rgb(50,50,60);
   color: $header-font-color;
 
@@ -95,24 +97,25 @@ $mobile-header-height: 600px;
   @include body-width();
 }
 
-.flex-container-space-between {
+.flex-container-left, .flex-container-space-between, .flex-container-center {
+  display: flex;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;    
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
+.flex-container-space-between {
+  justify-content: space-between;
+}
+
 .flex-container-left {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;    
   justify-content: left;
-  flex-wrap: wrap;
+}
+
+.flex-container-center {
+  justify-content: center;
 }
 
 .flex-child {
@@ -144,6 +147,7 @@ $mobile-header-height: 600px;
 .project {
   -webkit-flex-basis: 250px;
   flex: 1 0 250px;
+  max-width: 500px;
   align-self: flex-start;
   margin: 15px;
   position: relative;
@@ -152,7 +156,7 @@ $mobile-header-height: 600px;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;    
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -194,7 +198,7 @@ $transition-type: ease;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;    
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -203,10 +207,12 @@ $transition-type: ease;
 }
 
 .project-text-shadow {
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 3px rgba(0,0,0,.9);
 }
 
 .project-stack {
+  color: black;
+  font-weight: bolder;
   margin-bottom: 10px;
 }
 

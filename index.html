@@ -13,9 +13,9 @@
 <div class="hero-overlay">
   <div class="hero-text">
     <h1>Hi, I'm Kristian.</h1>
-    <p class="about">
+    <div class="about">
       {% include about-me-short.html %}
-    </p>
+    </div>
   </div>
 </div>
 
@@ -30,9 +30,13 @@
           <div class="project">
             <div class="project-text">
               <h1 class="project-title"><a href="{{ project.project-url }}">{{ project.title }}</a></h1>
-              <h3 class="project-stack">{{ project.stack }}</h3>
+              <p class="project-description">
+                {{ project.output }}
+              </p>
             </div>
-            <img src="{{ project.image }}" class="project-image">
+            <a href="{{ project.project-url }}" class="project-image-link">
+              <img srcset="{{ project.image }}" sizes="(max-width: 768px) 90vw, 25vw" class="project-image">
+            </a>
           </div>
         {% endfor %}
       </div>

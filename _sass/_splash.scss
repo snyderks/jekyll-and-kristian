@@ -145,9 +145,9 @@ $mobile-header-height: 600px;
 }
 
 .project {
-  -webkit-flex-basis: 250px;
-  flex: 1 0 250px;
-  max-width: 500px;
+  -webkit-flex-basis: 33%;
+  flex-basis: 33%;
+  flex: 1 0 33%;
   align-self: flex-start;
   margin: 15px;
   position: relative;
@@ -158,52 +158,28 @@ $mobile-header-height: 600px;
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  max-width: 66%;
 }
 
 $transition-duration: 0.5s;
 $transition-type: ease;
 
 .project-image {
-  width: 100%;
-  height: 100%;
-  transition: $transition-duration filter $transition-type, transform $transition-duration $transition-type;
-  webkit-transition: $transition-duration -webkit-filter $transition-type, -webkit-transform $transition-duration $transition-type;
-  -moz-transition: $transition-duration -moz-filter $transition-type, -moz-transform $transition-duration $transition-type;
-  -ms-transition: $transition-duration -ms-filter $transition-type, -ms-transform $transition-duration $transition-type;
-  -o-transition: $transition-duration -o-filter $transition-type, -o-transform $transition-duration $transition-type;
-}
+  display: block;
+  max-width: 100%;
+ }
 
-.project-image-blurred {
-  transition: $transition-duration filter $transition-type, transform $transition-duration $transition-type;
-  webkit-transition: $transition-duration -webkit-filter $transition-type, -webkit-transform $transition-duration $transition-type;
-  -moz-transition: $transition-duration -moz-filter $transition-type, -moz-transform $transition-duration $transition-type;
-  -ms-transition: $transition-duration -ms-filter $transition-type, -ms-transform $transition-duration $transition-type;
-  -o-transition: $transition-duration -o-filter $transition-type, -o-transform $transition-duration $transition-type;
-  filter: blur(5px);
-  overflow: hidden;
-  transform: scale(1.2);
-}
+.project-image-link {
+   display: block;
+   max-width: 50%;
+ }
 
 .project-text {
   padding: 20px;
-  flex: 0 0 100%;
+  flex: 1 1 50%;
   text-align: center;
-}
-
-.project-text-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  z-index: 10;
 }
 
 .project-text-shadow {
@@ -262,5 +238,14 @@ $transition-type: ease;
 @media (max-height: 600px) {
   .hero-text {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-image-link {
+    max-width: 100%;
+  }
+  .project {
+    max-width: 100%;
   }
 }

@@ -7,26 +7,27 @@
 
 <body>
 
-{% include header.html %}
+  {% include header.html %}
 
-<div class="hero-container"></div>
-<div class="hero-overlay">
-  <div class="hero-text">
-    <h1>Hi, I'm Kristian.</h1>
-    <div class="about">
-      {% include about-me-short.html %}
+  <div class="hero-container"></div>
+  <div class="hero-overlay">
+    <div class="hero-triangle"></div>
+    <div class="hero-text">
+      <h1>Hi, I'm Kristian.</h1>
+      <div class="about">
+        {% include about-me-short.html %}
+      </div>
     </div>
   </div>
-</div>
 
-<div class="page-content">
-  <a name="projects"></a>
-  <div class="dark-container">
-    <div class="body-width-container">
-      <h1 class="projects-header">Projects</h1>
-      <div class="flex-container-center">
-        {% assign projects = site.projects | sort: 'sort-order' %}
-        {% for project in projects %}
+  <div class="page-content">
+    <a name="projects"></a>
+    <div class="dark-container">
+      <div class="body-width-container">
+        <h1 class="projects-header">Projects</h1>
+        <div class="flex-container-center">
+          {% assign projects = site.projects | sort: 'sort-order' %}
+          {% for project in projects %}
           <div class="project">
             <div class="project-text">
               <h1 class="project-title"><a href="{{ project.project-url }}">{{ project.title }}</a></h1>
@@ -38,49 +39,48 @@
               <img srcset="{{ project.image }}" sizes="(max-width: 768px) 90vw, 25vw" class="project-image">
             </a>
           </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
-  <div class="light-container">
-    <div class="body-width-container">
-      <h1 class="section-header"><a name="experience"></a>Experience</h1>
-      <div class="flex-container-space-between">
-      {% assign jobs = site.jobs | sort: 'start-date' | reverse %}
-      {% for job in jobs %}
-        <div class="job">
-          <h3 class="job-company">{{job.company}}</h3>
-          <div class="flex-container-space-between job-company-container">
-            <span class="flex-child"><span><h6 class="job-title">{{job.title}}</h6></span>
-            <span class="flex-child" class="job-time">{{job.time}}</span>
-          </div>
-          <hr>
-          <h5 class="tools-header">Tools/Languages</h5>
-          <div class="flex-container-left">
+    <div class="light-container">
+      <div class="body-width-container">
+        <h1 class="section-header"><a name="experience"></a>Experience</h1>
+        <div class="flex-container-space-between">
+          {% assign jobs = site.jobs | sort: 'start-date' | reverse %}
+          {% for job in jobs %}
+          <div class="job">
+            <h3 class="job-company">{{job.company}}</h3>
+            <div class="flex-container-space-between job-company-container">
+              <span class="flex-child"><span><h6 class="job-title">{{job.title}}</h6></span>
+              <span class="flex-child" class="job-time">{{job.time}}</span>
+            </div>
+            <hr>
+            <h5 class="tools-header">Tools/Languages</h5>
+            <div class="flex-container-left">
 
-            {% for tool in job.tools %}
+              {% for tool in job.tools %}
               <span class="job-tool">
                 {{tool}}
-              </span>
-            {% endfor %}
+              </span> {% endfor %}
+            </div>
+            <p class="job-description">{{job.output}}</p>
           </div>
-          <p class="job-description">{{job.output}}</p>
+          {% endfor %}
         </div>
-      {% endfor %}
+      </div>
+    </div>
+    <div class="dark-container">
+      <div class="body-width-container">
+        <a name="contact"></a>
+        <p>
+          {% include contact-me.html %}
+        </p>
       </div>
     </div>
   </div>
-  <div class="dark-container">
-    <div class="body-width-container">
-      <a name="contact"></a>
-      <p>
-        {% include contact-me.html %}
-      </p>
-    </div>
-  </div>
-</div>
 
-{% include footer.html %}
+  {% include footer.html %}
 
 </body>
 

@@ -3,13 +3,13 @@ $footer-background-color: rgba(90, 145, 232, 1);
 footer {
   min-height: 200px;
   background-color: $footer-background-color;
-  color: $header-font-color;
+  color: $light-text-color;
   display: flex;
   justify-content: center;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
 
   small {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
   }
   a {
     color: inherit;

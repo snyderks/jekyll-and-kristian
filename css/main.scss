@@ -33,16 +33,17 @@ html {
 // Our variables
 $base-font-family: "Rubik", Helvetica, Arial, sans-serif;
 $header-font-family: $base-font-family;
-$header-font-weight: 300;
-$header-font-color: #f4f4f4;
+$header-font-weight: 400;
+$header-font-color: #111;
 $base-font-size:   14pt;
-$base-font-weight: 300;
+$base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
 $text-color:       #121212;
+$light-text-color: #f0f0f0;
 $background-color: #ddd;
 $brand-color:      #2a7ae2;
 $link-color-light: #84abce;
@@ -59,15 +60,6 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 $font-size-switch: 950px;
-
-// Minima also includes a mixin for defining media queries.
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 
 @import 'reset';
 @import 'splash';

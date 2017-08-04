@@ -1,0 +1,32 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en-US">
+
+{% include head.html %}
+
+<body class="post-bg">
+
+{% include header.html %}
+
+<article class="post">
+    <div class="post-content">
+        <div class="post-header">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="post-author">By {{ page.author }}</div>
+            <div class="post-date">Last Updated {{ page.date | date_to_long_string }}</div>
+        </div>
+        <div class="post-triangle-clipper">
+            <div class="post-triangle"></div>
+        </div>
+        <div class="post-body">
+            {{ page }}
+        </div>
+    </div>
+</article>
+
+{% include footer.html %}
+
+</body>
+
+</html>

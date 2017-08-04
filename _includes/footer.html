@@ -10,6 +10,11 @@
     <div class="right-footer">
       <div class="footer-nav">
         <span class="nav-item">
+          <a href="{{site.url}}{{site.baseurl}}blog">
+            Blog
+          </a>
+        </span>
+        <span class="nav-item">
           <a href="{{site.url}}{{site.baseurl}}#projects">
             Projects
           </a>
@@ -25,8 +30,17 @@
           </a>
         </span>
       </div>
-      <div class="copyright"><p><small>Copyright Kristian Snyder &copy; 2016</small></p>
-                             <a href="http://jekyllrb.com/"><p class="jekyll"><small>Made with Jekyll</small><img src="/img/jekyll-notext-light-transparent.png" class="jekyll-logo"/></p></a></div>
+      <div class="copyright">
+        <div>
+          Copyright Kristian Snyder &copy; {{ site.time | date: "%Y" }}
+        </div>
+        <div>
+          <a href="http://jekyllrb.com/">
+            <div class="jekyll">Made with Jekyll
+              <img src="/img/jekyll-notext-light-transparent.png" class="jekyll-logo"/>
+            </div>
+          </a>
+        </div>
     </div>
   </div>
 </footer>

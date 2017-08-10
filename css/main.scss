@@ -2,7 +2,8 @@
 ---
 @charset "utf-8";
 
-@import 'https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500';
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 html {
   -webkit-font-variant-ligatures: none;
@@ -12,6 +13,12 @@ html {
   -moz-font-feature-settings: 'liga' 0, 'onum' 1, 'kern' 1;
   -o-font-feature-settings: 'liga' 0, 'onum' 1, 'kern' 1;
   font-feature-settings: 'liga' 0, 'onum' 1, 'kern' 1;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 * {
@@ -32,32 +39,35 @@ html {
 
 // Our variables
 $base-font-family: "Rubik", Helvetica, Arial, sans-serif;
+$code-font-family: Inconsolata, 'Courier New', Courier, monospace;
 $header-font-family: $base-font-family;
 $header-font-weight: 400;
 $header-font-color: #111;
-$base-font-size:   14pt;
+$base-font-size: 12pt;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit: 30px;
 
-$text-color:       #121212;
+$text-color: #121212;
 $light-text-color: #f0f0f0;
 $background-color: #ddd;
-$brand-color:      #2a7ae2;
+$dark-bg-color: rgb(50, 50, 60);
+$header-bg: #f2f2f2;
+$brand-color: #2a7ae2;
 $link-color-light: #84abce;
-$link-color-dark:  #1662a6;
+$link-color-dark: #1662a6;
 
-$grey-color:       #828282;
+$grey-color: #828282;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark: darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width: 800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$on-palm: 600px;
+$on-laptop: 800px;
 
 $font-size-switch: 950px;
 
@@ -66,6 +76,8 @@ $font-size-switch: 950px;
 @import 'highlight';
 @import 'header';
 @import 'footer';
+@import 'post-body';
+@import 'posts';
 
 html {
   height: 100%;
@@ -78,6 +90,7 @@ a {
 }
 
 a:hover {
+  color: $link-color-dark;
   text-decoration: underline;
 }
 
@@ -86,7 +99,6 @@ abbr {
 }
 
 body {
-  height: 100%;
   position: relative;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -100,7 +112,7 @@ body {
 hr {
   height: 1px;
   border: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 1px 1px 1px white;
   width: 100%;
 }
@@ -110,8 +122,67 @@ small {
   color: $grey-color;
 }
 
-code {
-  font-family: $header-font-family;
+$code-bg-color: #333;
+
+code,
+.code,
+.lineno {
+  color: $light-text-color;
+  font-family: $code-font-family;
+  background-color: $code-bg-color;
+  font-size: $base-font-size - 1pt;
+  border-radius: 3px;
+}
+
+code,
+.code {
+  padding: 1pt 4pt;
+}
+
+.highlight {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-face-color: #888;
+  scrollbar-track-color: none;
+}
+
+.highlight::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+}
+
+.highlight::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.highlight::-webkit-scrollbar-track {
+  background: none;
+}
+
+.lineno {
+  border-right: 1px solid #555;
+  padding-right: 0.5em;
+}
+
+.highlight {
+  background-color: $code-bg-color;
+  padding: 0.2em 0.5em;
+  margin: 1em 0;
+
+  .code {
+    padding-left: 0.5em;
+  }
+
+  code,
+  .code,
+  .lineno {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  code {
+    padding: 0;
+  }
 }
 
 em {
@@ -122,7 +193,12 @@ strong {
   font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $header-font-family;
   font-weight: $header-font-weight;
   line-height: 1.4;
@@ -130,10 +206,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: $base-font-size * 2.5;
+  margin: $base-font-size 0;
 }
 
 h2 {
   font-size: $base-font-size * 2;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: $base-font-size * 0.75 0;
 }
 
 h3 {
@@ -154,7 +239,12 @@ h6 {
   font-weight: 500;
 }
 
-li {
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+ul li {
   list-style-type: circle;
   margin-left: 1.1em;
 }

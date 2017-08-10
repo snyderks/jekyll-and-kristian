@@ -1,0 +1,22 @@
+main.posts {
+  background-color: $header-bg;
+  width: 80%;
+  margin: auto;
+  padding: 0.75em;
+}
+
+.post-excerpt {
+  list-style: none;
+  margin-left: 0;
+
+  h1 {
+    margin-bottom: 0;
+  }
+  .post-title-link {
+    color: $text-color;
+  }
+  .post-title-link:hover {
+    color: $link-color-dark;
+    text-decoration: none;
+  }
+}

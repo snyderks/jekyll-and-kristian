@@ -1,7 +1,5 @@
 title: Kristian Snyder
 email: snyderkristian@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  DESCRIPTION!
 baseurl: / # the subpath of your site, e.g. /blog
 url: "https://www.kristiansnyder.com" # the base hostname & protocol for your site
 twitter_username: kristian_snyder
@@ -13,6 +11,19 @@ my_name: Kristian
 markdown: kramdown
 theme: minima
 exclude: [README.md, .gitignore, s3_website.yml, Gemfile, Gemfile.lock]
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+  syntax_highlighter_opts:
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
 
 collections:
 - jobs

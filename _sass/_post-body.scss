@@ -1,0 +1,124 @@
+p {
+  margin: 1em 0;
+}
+
+.post-bg {
+  background-image: url('/img/black_thread.png');
+  background-repeat: repeat;
+
+  header {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.post {
+  width: 80%;
+  padding-bottom: 0.75em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+}
+
+$triangle-color: #5a91e8;
+
+.post-header {
+  background: $triangle-color;
+  margin: 0 -0.75em;
+  padding: 20px 0.75em 10px 0.75em;
+  justify-content: space-between;
+  color: $light-text-color;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+  .post-title {
+    margin: 0;
+  }
+  .post-author,
+  .post-date {
+    margin-top: -0.2em;
+    font-size: 0.9em;
+  }
+}
+
+$post-triangle-w: 500%;
+$post-triangle-hypo: $post-triangle-w / 1.41;
+$post-triangle-left-offset: 100% - $post-triangle-w;
+
+.post-triangle {
+  width: $post-triangle-w;
+  padding-bottom: $post-triangle-hypo;
+  position: relative;
+  top: 0;
+  left: -.75em;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.post-triangle:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $triangle-color;
+  transform-origin: 0 100%;
+  transform: rotate(45deg) skewX(45deg) skewY(-29deg) translateY(-68.4%);
+  box-shadow: 0px -2px 2px $triangle-color;
+  z-index: 0;
+}
+
+.post-triangle-clipper {
+  margin: 0 -0.75em;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.post-body {
+  position: relative;
+  z-index: 1;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.footnotes {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #444;
+}
+
+.footnotes ol {
+  list-style: decimal;
+  margin-left: 1.1em;
+}
+
+@media (max-width: 1000px) {
+  .post-triangle:after {
+    transform: rotate(45deg) skewX(45deg) skewY(-29deg) translateY(-68.4%);
+  }
+}
+
+@media (max-width: 800px) {
+  .post {
+    width: 100%;
+  }
+  .post-header {
+    padding-top: 10px;
+    overflow: visible;
+  }
+  .post-triangle {
+    display: none;
+  }
+  .post-triangle-clipper {
+    display: none;
+  }
+}

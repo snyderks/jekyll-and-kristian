@@ -1,10 +1,16 @@
 <header>
   <div class="left-logo">
-    <span class="top-left-logo">K</span>
-    <span class="middle-slash">／</span>
-    <span class="bottom-right-logo">S</span>
+    <a href="/">
+      <span class="top-left-logo">K</span>
+      <span class="middle-slash">／</span>
+      <span class="bottom-right-logo">S</span>
+    </a>
   </div>
   <ul class="navbar">
+    <li class="nav-item">{% if page.url == "/" %}<a href="/blog">
+                         {% else %}<a href="{{site.url}}{{site.baseurl}}blog">
+                         {% endif %}
+                         Blog</a></li>
     <li class="nav-item">{% if page.url == "/" %}<a href="#projects">
                          {% else %}<a href="{{site.url}}{{site.baseurl}}#projects">
                          {% endif %}

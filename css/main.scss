@@ -139,6 +139,26 @@ code,
   padding: 1pt 4pt;
 }
 
+.highlight {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-face-color: #888;
+  scrollbar-track-color: none;
+}
+
+.highlight::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+}
+
+.highlight::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.highlight::-webkit-scrollbar-track {
+  background: none;
+}
+
 .lineno {
   border-right: 1px solid #555;
   padding-right: 0.5em;
@@ -147,8 +167,6 @@ code,
 .highlight {
   background-color: $code-bg-color;
   padding: 0.2em 0.5em;
-  border-radius: 5px;
-  border: 1px solid #ddd;
   margin: 1em 0;
 
   .code {

@@ -15,6 +15,10 @@ footer {
     color: inherit;
     font-size: inherit;
   }
+  a:hover {
+    color: $light-text-color;
+    text-decoration: underline;
+  }
 }
 
 .copyright {
@@ -79,7 +83,7 @@ footer {
   content: "";
   width: 1px;
   height: 90%;
-  background-color: $header-font-color;
+  background-color: $light-text-color - #181818;
 }
 
 @media (max-width: 600px) {

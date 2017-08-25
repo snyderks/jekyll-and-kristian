@@ -81,6 +81,7 @@ $font-size-switch: 950px;
 
 html {
   height: 100%;
+  width: 100vw;
   background-color: $background-color;
 }
 
@@ -107,6 +108,7 @@ body {
   color: $text-color;
   word-wrap: break-word;
   line-height: 1.75;
+  width: 100vw;
 }
 
 hr {

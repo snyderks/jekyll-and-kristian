@@ -11,6 +11,7 @@ my_name: Kristian
 markdown: kramdown
 theme: minima
 exclude: [README.md, .gitignore, s3_website.yml, Gemfile, Gemfile.lock]
+highlighter: rouge
 
 kramdown:
   input: GFM

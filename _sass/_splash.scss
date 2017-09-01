@@ -60,6 +60,7 @@ $triangle-color: rgba(25, 130, 255, 0.8);
   display: -webkit-flex;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 @media (max-height: 600px) {

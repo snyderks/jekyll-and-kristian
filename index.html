@@ -17,6 +17,17 @@
       <div class="about">
         {% include about-me-short.html %}
       </div>
+      <div class="icons flex-container-center">
+        {% assign icons = site.icons %}
+        {% for icon in icons %}
+          <div class="icon flex-container-center">
+            <a href="{{ icon.href }}" class="icon-link flex-child flex-container-space-between">
+              <div class="{{ icon.class }} icon-glyph flex-child"></div>
+              <div class="icon-name flex-child">{{ icon.name }}</div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 

@@ -38,7 +38,7 @@ $triangle-color: rgba(25, 130, 255, 0.8);
 }
 
 .hero-triangle:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -60,6 +60,7 @@ $triangle-color: rgba(25, 130, 255, 0.8);
   display: -webkit-flex;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 @media (max-height: 600px) {
@@ -92,7 +93,7 @@ $triangle-color: rgba(25, 130, 255, 0.8);
   }
 
   .hero-text {
-    padding: 0 10%;
+    padding: 0 20%;
   }
 }
 
@@ -102,6 +103,9 @@ $triangle-color: rgba(25, 130, 255, 0.8);
   }
   .hero-triangle:after {
     visibility: hidden;
+  }
+  .hero-text {
+    padding: 2%;
   }
 }
 
@@ -113,7 +117,6 @@ $triangle-color: rgba(25, 130, 255, 0.8);
 
 .hero-text {
   align-self: flex-end;
-  margin-bottom: 3%;
   padding: 0 20%;
   font-weight: $header-font-weight;
   color: #f3f3f3;
@@ -124,6 +127,7 @@ $triangle-color: rgba(25, 130, 255, 0.8);
   }
   a:hover {
     text-decoration: none;
+    color: $light-text-color;
     border-width: 2px;
   }
   z-index: 2;
@@ -194,6 +198,34 @@ $triangle-color: rgba(25, 130, 255, 0.8);
   align-self: center;
 }
 
+.icons {
+  flex-direction: row;
+}
+
+.icon {
+  display: inline-block;
+  padding: 15px;
+
+  .icon-link {
+    flex-direction: column;
+  }
+  .icon-glyph {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: -0.15em;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+  }
+  a:hover {
+    color: #f7d825;
+    text-decoration: none;
+    border: 0;
+  }
+}
+
 .job-tool {
   flex: 0 1 auto;
   padding: 1px 7px;
@@ -255,7 +287,7 @@ $transition-type: ease;
 }
 
 .project-text-shadow {
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, .9);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
 }
 
 .project-stack {

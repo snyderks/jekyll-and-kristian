@@ -90,6 +90,10 @@ footer {
   .footer-container {
     width: 95%;
   }
+  .footer-nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 489px) {

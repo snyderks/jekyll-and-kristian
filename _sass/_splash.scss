@@ -13,6 +13,10 @@ $job-tool-horiz-margin: 6px;
   font-weight: lighter;
 }
 
+.centered-form {
+  text-align: center;
+}
+
 .hero-container {
   position: absolute;
   width: 100%;
@@ -172,6 +176,33 @@ $triangle-color: rgba(25, 130, 255, 0.8);
     text-decoration: none;
     border: 0;
   }
+}
+
+form {
+  margin: auto;
+  display: inline-block;
+}
+input, textarea {
+  border: 1px $light-text-color solid;
+  padding: 10px;
+  margin: 10px 0;
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type="email"], textarea {
+  width: 300px;
+}
+
+input[type="submit"] {
+  background-color: $brand-color;
+  color: white;
+  border: none;
 }
 
 .job-tool {

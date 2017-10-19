@@ -2,9 +2,9 @@ $hero-side-padding: 50px;
 $image-height: 800px;
 $overlay-color: rgba(20, 110, 255, 0.5);
 $project-header-color: #33c2ff;
-$mobile-header-height: 600px;
+$mobile-header-height: 725px;
 
-$hero-container-height: 600px;
+$hero-container-height: 725px;
 
 $job-tool-horiz-margin: 6px;
 
@@ -17,6 +17,10 @@ $job-tool-horiz-margin: 6px;
   text-align: center;
 }
 
+.contact {
+  text-align: center;
+}
+
 .hero-container {
   position: absolute;
   width: 100%;
@@ -26,7 +30,7 @@ $job-tool-horiz-margin: 6px;
   z-index: -1; // behind everything else (default of 0)
 }
 
-$triangle-width: 500%;
+$triangle-width: 600%;
 $triangle-hypo-length: $triangle-width / 1.41;
 $triangle-color: rgba(25, 130, 255, 0.8);
 
@@ -34,7 +38,7 @@ $triangle-color: rgba(25, 130, 255, 0.8);
   width: $triangle-width;
   padding-bottom: $triangle-hypo-length;
   height: $hero-container-height;
-  left: -100%;
+  left: -150%;
   bottom: 0;
   position: absolute;
   overflow: hidden;
@@ -83,6 +87,23 @@ $triangle-color: rgba(25, 130, 255, 0.8);
     border-width: 2px;
   }
   z-index: 2;
+}
+
+.salutation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    display: block;
+  }
+
+  img {
+    display: block;
+    height: 150px;
+    border-radius: 300px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  }
 }
 
 .page-content {
@@ -197,12 +218,17 @@ textarea {
 
 input[type="email"], textarea {
   width: 300px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4) inset;
+  border: none;
+  max-width: 800px;
 }
 
 input[type="submit"] {
   background-color: $brand-color;
   color: white;
   border: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 .job-tool {
@@ -243,6 +269,7 @@ input[type="submit"] {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   max-width: 66%;
 }
 
@@ -252,6 +279,8 @@ $transition-type: ease;
 .project-image {
   display: block;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-image-link {
@@ -345,13 +374,13 @@ $transition-type: ease;
 
 @media (min-width: 1300px) {
   .hero-triangle {
-    left: -50%;
+    left: -100%;
   }
 }
 
 @media (max-width: 950px) {
   .hero-triangle {
-    left: -145%;
+    left: -300%;
   }
 }
 
@@ -360,7 +389,7 @@ $transition-type: ease;
     background-position-x: 30%;
   }
   .hero-triangle {
-    left: -175%;
+    left: -300%;
   }
 
   .hero-text {
@@ -381,6 +410,13 @@ $transition-type: ease;
   }
   .hero-text {
     padding: 2%;
+  }
+}
+
+@media (max-width: 500px) {
+  .salutation {
+    align-content: center;
+    flex-wrap: wrap;
   }
 }
 

@@ -12,7 +12,7 @@ tools:
 start-date: 2016-05-01
 time: May 2016 - Present
 ---
-Overall project involved developing a web-based servicing enrollment and claims of a **$40 million** insurance division of GAIC.
+Overall project involved developing a web-based servicing enrollment and claims of a **$40 million** insurance division of GAIC. I worked in a Scrum-based development team with 3 senior developers and contributed as a full-time worker would, participating in planning and design meetings and developing features of the product.
 - Built several customer-facing pages and critical features using business requirements
 - Created microservice built on WCF to rapidly build and serve search data (10x+ improvement)
 - Built and integrated Windows Service to accept and execute messages on top of [RabbitMQ](https://www.rabbitmq.com/)

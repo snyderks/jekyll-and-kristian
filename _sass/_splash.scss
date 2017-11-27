@@ -102,7 +102,7 @@ $triangle-color: rgba(25, 130, 255, 0.8);
     display: block;
     height: 150px;
     border-radius: 300px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -203,7 +203,8 @@ form {
   margin: auto;
   display: inline-block;
 }
-input, textarea {
+input,
+textarea {
   border: 1px $light-text-color solid;
   padding: 10px;
   margin: 10px 0;
@@ -216,9 +217,10 @@ textarea {
   height: 200px;
 }
 
-input[type="email"], textarea {
+input[type="email"],
+textarea {
   width: 300px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4) inset;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6) inset;
   border: none;
   max-width: 800px;
 }
@@ -227,8 +229,8 @@ input[type="submit"] {
   background-color: $brand-color;
   color: white;
   border: none;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .job-tool {
@@ -237,7 +239,7 @@ input[type="submit"] {
   margin: 3px $job-tool-horiz-margin;
   background-color: rgb(25, 130, 255);
   color: $light-text-color;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
   border-radius: 20px;
 }
 

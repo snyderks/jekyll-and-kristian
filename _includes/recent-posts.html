@@ -1,0 +1,14 @@
+{% for post in site.posts limit:3 %}
+<li class="post-excerpt-light">
+    <h1 class="post-title-link">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </h1>
+    <div>
+        <small>{{ post.date | date_to_long_string }}</small>
+    </div>
+    <div>{{ post.excerpt }}</div>
+    <div>
+        <a href="{{ post.url }}">Read more &rarr;</a>
+    </div>
+</li>
+{% endfor %}

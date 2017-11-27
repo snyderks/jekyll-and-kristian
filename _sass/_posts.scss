@@ -20,3 +20,24 @@ main.posts {
     text-decoration: none;
   }
 }
+
+.post-excerpt-light {
+  list-style: none;
+  margin-left: 0;
+
+  h1 {
+    margin-bottom: 0;
+  }
+  .post-title-link a,
+  a {
+    color: $link-color-light;
+  }
+  .post-title-link a:hover,
+  a:hover {
+    color: $light-text-color;
+    text-decoration: none;
+  }
+  small {
+    color: $grey-color-light;
+  }
+}

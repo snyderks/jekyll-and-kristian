@@ -3,7 +3,7 @@ p {
 }
 
 .post-bg {
-  background-image: url('/img/black_thread.png');
+  background-image: url("/img/black_thread.png");
   background-repeat: repeat;
 
   header {
@@ -52,13 +52,13 @@ $post-triangle-left-offset: 100% - $post-triangle-w;
   padding-bottom: $post-triangle-hypo;
   position: relative;
   top: 0;
-  left: -.75em;
+  left: -0.75em;
   overflow: hidden;
   z-index: 0;
 }
 
 .post-triangle:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

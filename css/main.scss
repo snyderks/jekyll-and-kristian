@@ -147,6 +147,7 @@ code,
   -webkit-overflow-scrolling: touch;
   scrollbar-face-color: #888;
   scrollbar-track-color: none;
+  position: relative;
 }
 
 .highlight::-webkit-scrollbar {
@@ -169,8 +170,8 @@ code,
 
 .highlight {
   background-color: $code-bg-color;
-  padding: 0.2em 0.5em;
-  // margin: 1em 0;
+  padding: 0 0.5em;
+  margin: 1em 0;
 
   .code {
     padding-left: 0.5em;

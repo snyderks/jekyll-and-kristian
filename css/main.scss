@@ -129,7 +129,7 @@ $code-bg-color: #333;
 
 code,
 .code,
-.lineno {
+.lineno, .rouge-code {
   color: $light-text-color;
   font-family: $code-font-family;
   background-color: $code-bg-color;
@@ -138,7 +138,7 @@ code,
 }
 
 code,
-.code {
+.code, .rouge-code {
   padding: 1pt 4pt;
 }
 
@@ -148,6 +148,11 @@ code,
   scrollbar-face-color: #888;
   scrollbar-track-color: none;
   position: relative;
+}
+
+pre.highlight {
+  padding: 0;
+  margin: 0;
 }
 
 .highlight::-webkit-scrollbar {

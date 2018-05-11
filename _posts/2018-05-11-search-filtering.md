@@ -4,6 +4,7 @@ title:  "Don't Mix the Filters"
 date:   2018-05-11 00:00:00 -0400
 author: "Kristian Snyder"
 categories: post
+description: Why you should keep pagination and filtering on the same side of the server, unless you want to have a bad time.
 ---
 
 *This is mostly a future note to myself, in case I am so foolish as to think this would be a good idea again. Maybe you'll find it useful too.*

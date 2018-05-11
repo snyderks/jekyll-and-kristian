@@ -4,7 +4,7 @@ title:  "No Such Database and Windows Access Permissions"
 date:   2017-11-15 00:00:00 -0400
 author: "Kristian Snyder"
 categories: post
-description: Fixing "no such database" errors with Visual Studio Data Comparison
+description: Fixing "no such database" in VS SQL Obj Explorer
 ---
 
 For my current (as of this post) position as a C#/.NET developer intern, I frequently replicate development databases to my local system through the Data Comparison tool in Visual Studio. One day, however, I got an interesting error when attempting to migrate data:

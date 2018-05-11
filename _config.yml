@@ -6,9 +6,7 @@ twitter_username: kristian_snyder
 github_username:  snyderks
 spotify_profile: https://open.spotify.com/user/knsnyder96
 my_name: Kristian
-description: >
-  My projects, blog, and past experience in software development 
-  using Go, JS, C#, and various other languages and frameworks.
+description: What I've learned so far (and the silly stuff)
 
 # Build settings
 markdown: kramdown

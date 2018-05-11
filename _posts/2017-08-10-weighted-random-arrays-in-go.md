@@ -4,7 +4,7 @@ title:  "Weighted Random Array Selection in Go"
 date:   2017-08-10 00:00:00 -0400
 author: "Kristian Snyder"
 categories: post
-description: How to select random items from a list with weighting while also cutting down on memory usage
+description: Picking from a weighted list with low memory usage
 ---
 
 *Update: I created [a library](https://github.com/snyderks/stairs) in Go that solves this problem.*

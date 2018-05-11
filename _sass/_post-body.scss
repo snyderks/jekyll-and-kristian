@@ -23,6 +23,18 @@ p {
   overflow: hidden;
 }
 
+.post-body {
+  li {
+    padding-left: 0.4em;
+  }
+  ol {
+    list-style: disc;
+  }
+  ul {
+    list-style: decimal;
+  }
+}
+
 $triangle-color: #5a91e8;
 
 .post-header {

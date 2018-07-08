@@ -34,8 +34,7 @@ main.posts {
   }
   .post-title-link a:hover,
   a:hover {
-    color: $light-text-color;
-    text-decoration: none;
+    color: $link-rollover;
   }
   small {
     color: $grey-color-light;

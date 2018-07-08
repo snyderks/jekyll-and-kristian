@@ -1,7 +1,6 @@
 $hero-side-padding: 50px;
 $image-height: 800px;
 $overlay-color: rgba(20, 110, 255, 0.5);
-$project-header-color: #33c2ff;
 $mobile-header-height: 725px;
 
 $hero-container-height: 725px;
@@ -21,43 +20,35 @@ $job-tool-horiz-margin: 6px;
   text-align: center;
 }
 
-.hero-container {
-  width: 100%;
-  background-size: cover;
-  background-image: url("../img/bg-1080.jpg");
-  background-color: black;
-  z-index: -1; // behind everything else (default of 0)
+.page-content {
+  background-color: $background-color;
+  background-image: none;
 }
 
-.hero-overlay {
+.hero-container {
   width: 100%;
-  padding-top: 20vh;
-  padding-bottom: 3vh;
-  color: $header-font-color;
-  background-color: rgba(0,0,0,0.4);
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   position: relative;
-  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: #fffbea;
+  z-index: -1;
 }
 
 .hero-text {
   align-self: flex-end;
   padding: 0 20%;
   font-weight: $header-font-weight;
-  color: #f3f3f3;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  color: $header-font-color;
   a {
-    color: #f3f3f3;
-    border-bottom: 1px solid #f3f3f3;
+    color: $accent-3;
   }
   a:hover {
-    text-decoration: none;
-    color: $light-text-color;
-    border-width: 2px;
+    color: $link-rollover;
   }
   z-index: 2;
 }
@@ -84,16 +75,7 @@ $job-tool-horiz-margin: 6px;
   z-index: 9;
 }
 
-.job {
-  -webkit-flex-basis: 250px;
-  flex-basis: 250px;
-  flex: 1 0 250px;
-  max-width: 500px;
-  padding: 1em;
-}
-
 .dark-container {
-  box-shadow: inset 0px 3px 7px black;
   background-color: $dark-bg-color;
   color: $light-text-color;
 
@@ -105,6 +87,11 @@ $job-tool-horiz-margin: 6px;
 .light-container {
   background-color: transparent;
   color: $text-color;
+
+  .section-header {
+    padding-bottom: 20px;
+    border-bottom: 2px solid $dark-accent;
+  }
 }
 
 .body-width-container {
@@ -166,8 +153,7 @@ $job-tool-horiz-margin: 6px;
     border: 0;
   }
   a:hover {
-    color: #f7d825;
-    text-decoration: none;
+    color: $link-rollover;
     border: 0;
   }
 }
@@ -193,26 +179,41 @@ textarea {
 input[type="email"],
 textarea {
   width: 300px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6) inset;
-  border: none;
+  border: 1px solid $dark-accent;
+  border-radius: 2px;
   max-width: 800px;
 }
 
 input[type="submit"] {
   background-color: $brand-color;
-  color: white;
-  border: none;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  color: $text-color;
+  border: 1px solid $text-color;
+  border-radius: 2px;
+}
+
+.job {
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
+  min-width: 500px;
+  flex: 0 1 50%;
+  padding: 1em;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+
+  .job-company {
+    padding-right: 5px;
+  }
 }
 
 .job-tool {
   flex: 0 1 auto;
   padding: 1px 7px;
   margin: 3px $job-tool-horiz-margin;
-  background-color: rgb(25, 130, 255);
-  color: $light-text-color;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.7);
+  background-color: $accent-4;
+  color: $text-color;
   border-radius: 20px;
 }
 
@@ -285,23 +286,13 @@ $transition-type: ease;
 }
 
 .project-title a {
-  color: $project-header-color;
-  transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -ms-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
+  color: $accent-4;
   text-decoration: none;
 }
 
 .project-title a:hover {
-  text-decoration: none;
-  color: #f7d825;
-  transition: color 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -ms-transition: color 0.5s ease;
-  -o-transition: color 0.5s ease;
+  color: $accent-4;
+  text-decoration: underline;
 }
 
 .projects-header {
@@ -336,17 +327,14 @@ $transition-type: ease;
   .project {
     max-width: 100%;
   }
+  .hero-text {
+    padding: 0 2%;
+  }
 }
 
 @media (max-width: 500px) {
   .salutation {
     align-content: center;
     flex-wrap: wrap;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .hero-container {
-    background-image: url("../img/bg-2160.jpg");
   }
 }

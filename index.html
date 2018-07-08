@@ -10,6 +10,7 @@
   {% include header.html %}
 
   <div class="hero-container">
+    <canvas class="background"></canvas>
     <div class="hero-overlay">
       <div class="hero-text">
         <div class="salutation">
@@ -59,14 +60,16 @@
     <div class="light-container">
       <div class="body-width-container">
         <h1 class="section-header"><a name="experience"></a>Experience</h1>
-        <div class="flex-container-space-between">
+        <div class="flex-container-center">
           {% assign jobs = site.jobs | sort: 'start-date' | reverse %}
           {% for job in jobs %}
           <div class="job">
-            <h3 class="job-company">{{job.company}}</h3>
-            <div class="flex-container-space-between job-company-container">
-              <span class="flex-child"><span><h6 class="job-title">{{job.title}}</h6></span>
-              <span class="flex-child" class="job-time">{{job.time}}</span>
+            <div class="job-header">
+                <h3 class="job-company">{{job.company}}</h3>
+                <div class="flex-container-space-between job-company-container">
+                  <span class="flex-child"><span><h6 class="job-title">{{job.title}}</h6></span>
+                  <span class="flex-child" class="job-time">{{job.time}}</span>
+                </div>
             </div>
             <hr>
             <h5 class="tools-header">Tools/Languages</h5>
@@ -100,6 +103,17 @@
 
   {% include footer.html %}
 
+<!--Script area for "load-sensitive" JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  <script>
+    window.onload = function() {
+      Particles.init({
+        selector: '.background',
+        connectParticles: true,
+        color: "#e5dba7"
+      });
+    }
+  </script>
 </body>
 
 </html>

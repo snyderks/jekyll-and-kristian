@@ -1,12 +1,10 @@
-$footer-background-color: rgba(90, 145, 232, 1);
-
 footer {
   min-height: 200px;
-  background-color: $footer-background-color;
+  // background-color: $dark-bg-color;
+  // background-color: $header-bg;
   color: $light-text-color;
   display: flex;
   justify-content: center;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
 
   small {
     color: rgba(255, 255, 255, 0.8);
@@ -81,9 +79,9 @@ footer {
   left: -15px;
   top: 5%;
   content: "";
-  width: 1px;
+  width: 3px;
   height: 90%;
-  background-color: $light-text-color - #181818;
+  background-color: rgb(255, 128, 0);;
 }
 
 @media (max-width: 600px) {

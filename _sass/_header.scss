@@ -1,15 +1,49 @@
 $header-margin: 10%;
 
+$header-height: 72px;
+$header-border: 2px;
+
 header {
   width: 100%;
   padding: 0 10%;
+  height: $header-height;
   background-color: $header-bg;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.7);
+  border-bottom: $header-border solid $header-font-color;
+  font-family: $header-font-family;
   color: $header-font-color;
   position: relative;
   z-index: 3;
+}
+
+$slash-width: 15px;
+
+.slash {
+  position: absolute;
+  height: $header-height - $header-border;
+  width: $slash-width;
+  -moz-transform: skew(-15deg);
+  -webkit-transform: skew(-15deg);
+  transform: skew(-15deg);
+}
+
+.first-slash {
+  background-color: $accent-1;
+  width: 40px;
+  left: -$slash-width;
+}
+.second-slash {
+  background-color: $accent-2;
+  left: $slash-width * 1.5;
+}
+.third-slash {
+  background-color: $accent-3;
+  left: $slash-width * 2.5;
+}
+.fourth-slash {
+  background-color: $accent-4;
+  left: $slash-width * 3.5;
 }
 
 .left-logo {
@@ -17,11 +51,14 @@ header {
   position: relative;
   font-size: $base-font-size * 1.2;
   a {
+    text-decoration: none;
     color: inherit;
   }
   a:hover {
     text-decoration: none;
+    color: $dark-accent;
   }
+  z-index: 4;
 }
 
 .top-left-logo {
@@ -76,6 +113,27 @@ header {
   header {
     padding: 0 5%;
   }
+
+  $larger-slash-width: 30px;
+  .first-slash {
+    width: $larger-slash-width + 25px;
+    left: -$larger-slash-width + 20px;
+  }
+  .second-slash {
+    width: $larger-slash-width;
+    left: $larger-slash-width * 1.5;
+  }
+  .third-slash {
+    width: $larger-slash-width;
+    left: $larger-slash-width * 2.5;
+  }
+  .fourth-slash {
+    width: $larger-slash-width;
+    left: $larger-slash-width * 3.5;
+  }
+  .left-logo {
+    color: $header-bg;
+  }
 }
 
 @media (max-width: 470px) {
@@ -84,5 +142,26 @@ header {
   }
   header {
     justify-content: center;
+  }
+  $largest-slash-width: 28%;
+  $left-offset: 3%;
+  .first-slash, .second-slash, .third-slash, .fourth-slash {
+    width: $largest-slash-width;
+  }
+
+  .first-slash {
+    left: -$left-offset;
+  }
+  .second-slash {
+    left: $largest-slash-width - $left-offset;
+  }
+  .third-slash {
+    left: $largest-slash-width * 2 - $left-offset;
+  }
+  .fourth-slash {
+    left: $largest-slash-width * 3 - $left-offset;
+  }
+  .left-logo {
+    color: $header-bg;
   }
 }

@@ -12,12 +12,12 @@ main.posts {
   h1 {
     margin-bottom: 0;
   }
-  .post-title-link {
-    color: $text-color;
-  }
-  .post-title-link:hover {
-    color: $link-color-dark;
+  .post-title-link a {
     text-decoration: none;
+  }
+  .post-title-link a:hover {
+    color: $link-rollover;
+    text-decoration: underline;
   }
 }
 

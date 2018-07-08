@@ -12,9 +12,13 @@
 <article class="post">
     <div class="post-content">
         <div class="post-header">
+            <div class="slash-post first-slash-post"></div>
+            <div class="slash-post second-slash-post"></div>
+            <div class="slash-post third-slash-post"></div>
+            <div class="slash-post fourth-slash-post"></div>
             <h1 class="post-title">{{ page.title }}</h1>
-            <div class="post-author">By {{ page.author }}</div>
-            <div class="post-date">Last Updated {{ page.date | date_to_long_string }}</div>
+            <h3 class="post-author">By {{ page.author }}</h3>
+            <h3 class="post-date">Last Updated {{ page.date | date_to_long_string }}</h3>
         </div>
         <div class="post-body">
             {{ page }}

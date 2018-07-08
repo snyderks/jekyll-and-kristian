@@ -2,9 +2,6 @@
 ---
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500');
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-
 html {
   -webkit-font-variant-ligatures: none;
   -moz-font-variant-ligatures: none;
@@ -38,29 +35,42 @@ html {
 }
 
 // Our variables
-$base-font-family: "Rubik", Helvetica, Arial, sans-serif;
+$accent-1: rgb(255, 64, 0);
+$accent-2: rgb(255, 98, 0);
+$accent-3: rgb(255, 128, 0);
+$accent-4: rgb(255, 170, 0);
+
+$deep-accent: rgb(255, 115, 0);
+
+$dark-accent: #4e3701;
+$x-dark-accent: #332401;
+$xl-dark-accent: #201700;
+
+$link-rollover: rgb(98, 148, 255);
+
+$base-font-family: "Titillium Web", Helvetica, Arial, sans-serif;
 $code-font-family: Inconsolata, 'Courier New', Courier, monospace;
-$header-font-family: $base-font-family;
-$header-font-weight: 400;
-$header-font-color: #111;
-$base-font-size: 12pt;
+$header-font-family: "Raleway", Helvetica, Arial, sans-serif;
+$header-font-weight: 700;
+$header-font-color: $dark-accent;
+$base-font-size: 14pt;
 $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit: 30px;
 
-$text-color: #121212;
+$text-color: $x-dark-accent;
 $light-text-color: #f0f0f0;
-$background-color: #ddd;
+$background-color: #fff5e7;
 $dark-bg-color: rgb(50, 50, 60);
-$header-bg: #f2f2f2;
-$brand-color: #2a7ae2;
-$link-color-light: #84abce;
-$link-color-dark: #1662a6;
-
-$grey-color: #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$header-bg: $background-color;
+$brand-color: $accent-3;
+$link-color-light: $accent-4;
+$link-color-dark: $deep-accent;
+$grey-color: $dark-accent;
+$grey-color-light: lighten($grey-color, 25%);
+$grey-color-light-small: lighten($grey-color, 15%);
 $grey-color-dark: darken($grey-color, 25%);
 
 // Width of the content area
@@ -88,12 +98,10 @@ html {
 
 a {
   color: $link-color-dark;
-  text-decoration: none;
 }
 
 a:hover {
-  color: $link-color-dark;
-  text-decoration: underline;
+  color: $link-rollover;
 }
 
 abbr {
@@ -110,13 +118,13 @@ body {
   word-wrap: break-word;
   line-height: 1.75;
   width: 100vw;
+  z-index: -1;
 }
 
 hr {
   height: 1px;
   border: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 1px 1px 1px white;
+  background-color: $dark-accent;
   width: 100%;
 }
 
@@ -125,7 +133,7 @@ small {
   color: $grey-color;
 }
 
-$code-bg-color: #333;
+$code-bg-color: $xl-dark-accent;
 
 code,
 .code,
@@ -145,7 +153,7 @@ code,
 .highlight {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-  scrollbar-face-color: #888;
+  scrollbar-face-color: $grey-color-light;
   scrollbar-track-color: none;
   position: relative;
 }
@@ -161,7 +169,7 @@ pre.highlight {
 }
 
 .highlight::-webkit-scrollbar-thumb {
-  background: #888;
+  background: $grey-color-light;
 }
 
 .highlight::-webkit-scrollbar-track {
@@ -169,7 +177,7 @@ pre.highlight {
 }
 
 .lineno {
-  border-right: 1px solid #555;
+  color: $grey-color-light-small;
   padding-right: 0.5em;
 }
 
@@ -199,7 +207,7 @@ em {
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h1,

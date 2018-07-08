@@ -1,0 +1,33 @@
+title: Kristian Snyder
+email: snyderkristian@gmail.com
+baseurl: / # the subpath of your site, e.g. /blog
+url: "https://kristiansnyder.com" # the base hostname & protocol for your site
+twitter_username: kristian_snyder
+github_username:  snyderks
+spotify_profile: https://open.spotify.com/user/knsnyder96
+my_name: Kristian
+description: What I've learned so far (and the silly stuff)
+
+# Build settings
+markdown: kramdown
+theme: minima
+exclude: [README.md, .gitignore, s3_website.yml, Gemfile, Gemfile.lock]
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+  syntax_highlighter_opts:
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+collections:
+- jobs
+- projects
+- icons

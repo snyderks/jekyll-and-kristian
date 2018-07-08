@@ -4,6 +4,7 @@ title:  "No Such Database and Windows Access Permissions"
 date:   2017-11-15 00:00:00 -0400
 author: "Kristian Snyder"
 categories: post
+description: Fixing "no such database" in VS SQL Obj Explorer
 ---
 
 For my current (as of this post) position as a C#/.NET developer intern, I frequently replicate development databases to my local system through the Data Comparison tool in Visual Studio. One day, however, I got an interesting error when attempting to migrate data:
@@ -14,7 +15,7 @@ Internal error: Ese could not be initialized; No such database;
 
 What do you mean, no such database? I can see the database *right there! (Points at database on screen)*
 
-I scrounged the Google, as you do, with that error and came up with increasingly voodoo-like solutions from people that were in entirely different solutions. Eventually, I did find [one other post](http://dev.emptywolf.com/2014/10/dbmdl-could-not-be-created-internal.html) that had the same issue, with the solution as the single comment.
+I scrounged the Google, as you do, with that error and came up with increasingly voodoo-like solutions from people that were in entirely different situations. Eventually, I did find [one other post](http://dev.emptywolf.com/2014/10/dbmdl-could-not-be-created-internal.html) that had the same issue, with the solution as the single comment.
 
 ## The Solution
 

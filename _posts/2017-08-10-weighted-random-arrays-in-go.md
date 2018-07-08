@@ -4,7 +4,10 @@ title:  "Weighted Random Array Selection in Go"
 date:   2017-08-10 00:00:00 -0400
 author: "Kristian Snyder"
 categories: post
+description: Picking from a weighted list with low memory usage
 ---
+
+*Update: I created [a library](https://github.com/snyderks/stairs) in Go that solves this problem.*
 
 Random array selection is easy: in Go, create a slice, figure out its length, generate a random integer from `0` up to `length - 1`, and retrieve the item. 
 

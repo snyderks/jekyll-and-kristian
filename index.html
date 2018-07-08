@@ -8,9 +8,7 @@
 <body>
 
   {% include header.html %}
-
   <div class="hero-container">
-    <canvas class="background"></canvas>
     <div class="hero-overlay">
       <div class="hero-text">
         <div class="salutation">
@@ -103,17 +101,6 @@
 
   {% include footer.html %}
 
-<!--Script area for "load-sensitive" JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-  <script>
-    window.onload = function() {
-      Particles.init({
-        selector: '.background',
-        connectParticles: true,
-        color: "#e5dba7"
-      });
-    }
-  </script>
 </body>
 
 </html>

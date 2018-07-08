@@ -1,5 +1,5 @@
 main.posts {
-  background-color: $header-bg;
+  background-color: $splash-bg;
   width: 80%;
   margin: auto;
   padding: 0.75em;
@@ -39,5 +39,11 @@ main.posts {
   }
   small {
     color: $grey-color-light;
+  }
+}
+
+@media(max-width: 700px) {
+  main.posts {
+    width: 100%;
   }
 }

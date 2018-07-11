@@ -29,6 +29,7 @@ $job-tool-horiz-margin: 6px;
   position: relative;
   margin-top: -$header-height;
   padding-top: $header-height;
+  overflow: hidden;
 }
 
 .hero-text {
@@ -300,12 +301,6 @@ $transition-type: ease;
   margin-bottom: 5px;
 }
 
-@media (max-height: 600px) {
-  .hero-text {
-    margin-bottom: 40px;
-  }
-}
-
 @media (max-width: 767px) {
   .project-image-link {
     max-width: 100%;
@@ -322,6 +317,13 @@ $transition-type: ease;
   .salutation {
     align-content: center;
     flex-wrap: wrap;
+  }
+  .job, .project {
+    min-width: 100%;
+    display: block;
+  }
+  .project-image {
+    max-width: 50%;
   }
 }
 

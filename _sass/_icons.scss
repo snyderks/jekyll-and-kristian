@@ -38,12 +38,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-code-fork:before {
-  content: "\61";
-}
 .icon-file-text:before {
   content: "\62";
 }
 .icon-envelope:before {
   content: "\63";
+}
+.icon-code-fork:before {
+  content: "\61";
+}
+.icon-linkedin-alt:before {
+  content: "\64";
+}
+.icon-twitter:before {
+  content: "\65";
 }

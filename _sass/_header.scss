@@ -5,6 +5,7 @@ header {
   padding: 0 10%;
   height: $header-height;
   background-color: $header-bg;
+  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
   border-bottom: $header-border solid $header-font-color;
@@ -151,13 +152,13 @@ $slash-width: 15px;
     left: -$left-offset;
   }
   .second-slash {
-    left: $largest-slash-width - $left-offset;
+    left: $largest-slash-width - $left-offset - 0.5%;
   }
   .third-slash {
-    left: $largest-slash-width * 2 - $left-offset;
+    left: $largest-slash-width * 2 - $left-offset - 1%;
   }
   .fourth-slash {
-    left: $largest-slash-width * 3 - $left-offset;
+    left: $largest-slash-width * 3 - $left-offset - 1.5%;
   }
   .left-logo {
     color: $header-bg;

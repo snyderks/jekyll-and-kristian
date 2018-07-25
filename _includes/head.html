@@ -1,14 +1,13 @@
 <head>
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %} {{page.title}} | {% endif %} {{site.title}}</title>
-  <link rel="stylesheet" href="{{site.url}}/css/main.css"/>
+  <link rel="stylesheet" href="/css/main.css"/>
   <link href="https://fonts.googleapis.com/css?family=Raleway:900|Inconsolata|Titillium+Web:400,400i,600,700,900" rel="stylesheet">
-  <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/img/favicon.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico"/>
   <meta name="description" content="{% if page.description %} {{page.description}} {% else %} {{site.description}} {% endif %}" />
   <meta property="og:title" content="{% if page.title %} {{page.title}} | {% endif %} {{site.title}}" />
   <meta property="og:description" content="{% if page.description %} {{page.description}} {% else %} {{site.description}} {% endif %}" />
-  {% if page.preview_image %}<meta property="og:image" content="{{site.url}}{{page.preview_image}}" />{% endif %}
+  {% if page.preview_image %}<meta property="og:image" content="{{page.preview_image}}" />{% endif %}
 </head>

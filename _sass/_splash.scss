@@ -189,7 +189,7 @@ input[type="submit"] {
   -webkit-flex-basis: 50%;
   flex-basis: 50%;
   min-width: 30%;
-  flex: 0 1 50%;
+  flex: 1 1 50%;
   padding: 1em;
 }
 
@@ -327,6 +327,14 @@ $transition-type: ease;
     max-width: 50%;
   }
 }
+
+// @media (min-width: 1024px) {
+//   .job {
+//     flex-basis: 33%;
+//     -webkit-flex-basis: 33%;
+//     flex: 1 1 33%;
+//   }
+// }
 
 .hero-container {
   background-color: #fff5e7;

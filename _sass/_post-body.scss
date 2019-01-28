@@ -95,6 +95,34 @@ $slash-post-width: 41px;
   margin-left: 1.1em;
 }
 
+table {
+  background-color: #F2F2F2;
+  text-align: left;
+}
+table td, table th {
+  padding: 4px 4px;
+}
+table tr:nth-child(even) {
+  background: rgb(210, 210, 210);
+}
+table thead {
+  background: #32323C;
+}
+table thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #F0F0F0;
+  text-align: center;
+  border-left: 2px solid #D8D8D8;
+}
+table thead th:first-child {
+  border-left: none;
+}
+
+table tfoot td {
+  font-size: 16px;
+}
+
 @media (max-width: 1000px) {
   .post-triangle:after {
     transform: rotate(45deg) skewX(45deg) skewY(-29deg) translateY(-68.4%);

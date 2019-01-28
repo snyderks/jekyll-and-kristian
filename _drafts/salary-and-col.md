@@ -32,15 +32,18 @@ for, like gasoline, housing, food, clothing, and other items. But it doesn't cov
 
 * Property tax
 * State income tax
-* Local sales tax (Chicago's is [10.25%!](https://www.avalara.com/taxrates/en/state-rates/illinois/cities/chicago/)
+* Local sales tax (Chicago's is [10.25%!](https://www.avalara.com/taxrates/en/state-rates/illinois/cities/chicago/))
 * Local income tax (this is mostly an Ohio thing. Lots of cities have a 1-2% income tax.)
 
 Here's some comparisons between Cincinnati and San Francisco (because I live in
 Cincinnati and San Francisco just because):
 
-All numbers assume the median home price in each city (except I chose Oakland to give
+All numbers assume the median home price in each city[^1] [^2] (except I chose Oakland to give
 SF a fighting chance) and a salary of $80K in Cincinnati, on the high end for a software
 engineer, reasons for which should be obvious soon.
+
+Cost of living adjustment estimates that an equivalent salary to $80,000 in Cincinnati
+is $159,755.38 in San Francisco.[^3]
 
 Expense percentages based on income are based on the 
 [Credit Counseling Society's Guidelines](https://www.nomoredebts.org/budgeting-guidelines),
@@ -52,23 +55,23 @@ other categories:
 * Transportation: +33%
 * Other Goods and Services: +25%
 
-|                                 | Cincinnati                                                                      | San Francisco                                                                            | % Change            |   |
-|---------------------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------------|---|
-| Home Price                      | $142,400                                                                        | $739,800                                                                                 | 519%                |   |
-| Income                          | $80,000                                                                         | $159,755.38                                                                              | 200%                |   |
-| Property Tax Rate [^PropTaxRate]          | 1.774%                                                                          | 0.683%                                                                                   | -1.091 basis points |   |
-| **Property Tax** [^PropTax]           | **$2,526**                                                                      | **$5,053**                                                                               | **200%**            |   |
-| Federal Income Tax [^FedTax]         | 13.62%, $10,900                                                                 | 18.62%, $29,751                                                                          |                     |   |
-| FICA                            | 7.65%, $6,120                                                                   | 6.43%, $10,277                                                                           |                     |   |
-| State Income Tax                | 2.61%, $2,091                                                                   | 7.32%, $11,701                                                                           |                     |   |
-| Local Income Tax                | 2.19%, $1,753                                                                   | 0%[^LocalTax]                                                                                   | -100%               |   |
-| **Take-Home Pay**               | **$59,137**                                                                     | **$108,026**                                                                             | **182%**            |   |
-| Groceries                       | $8,870                                                                          | $12,152                                                                                  | 137%                |   |
-| Transportation                  | $10,348                                                                         | $13,764                                                                                  | 133%                |   |
-| Other                           | $8,870                                                                          | $11,087                                                                                  | 125%                |   |
-| **Sales Taxable Expenses[^SalesTaxExp]** | **$28,088**                                                                     | **$37,003**                                                                              | **132%**            |   |
-| Sales Tax Rate                  | [6.5%](https://www.avalara.com/taxrates/en/state-rates/ohio/cities/cincinnati/) | [8.5%](https://www.avalara.com/taxrates/en/state-rates/california/cities/san-francisco/) | 2 basis points      |   |
-| **Sales Tax**                   | **$1,826**                                                                      | **$3,145**                                                                               | **172%**            |   |
+| Category                        | Cincinnati                                                                      | San Francisco                                                                            | % Change            |
+|---------------------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------------|
+| Home Price                      | $142,400                                                                        | $739,800                                                                                 | 519%                |
+| Income                          | $80,000                                                                         | $159,755.38                                                                              | 200%                |
+| Property Tax Rate [^6]          | 1.774%                                                                          | 0.683%                                                                                   | -1.091 basis points |
+| **Property Tax** [^5]           | **$2,526**                                                                      | **$5,053**                                                                               | **200%**            |
+| Federal Income Tax [^7]         | 13.62%, $10,900                                                                 | 18.62%, $29,751                                                                          |                     |
+| FICA                            | 7.65%, $6,120                                                                   | 6.43%, $10,277                                                                           |                     |
+| State Income Tax                | 2.61%, $2,091                                                                   | 7.32%, $11,701                                                                           |                     |
+| Local Income Tax                | 2.19%, $1,753                                                                   | 0%[^8]                                                                                   | -100%               |
+| **Take-Home Pay**               | **$59,137**                                                                     | **$108,026**                                                                             | **182%**            |
+| Groceries                       | $8,870                                                                          | $12,152                                                                                  | 137%                |
+| Transportation                  | $10,348                                                                         | $13,764                                                                                  | 133%                |
+| Other                           | $8,870                                                                          | $11,087                                                                                  | 125%                |
+| **Sales Taxable Expenses[^4]**  | **$28,088**                                                                     | **$37,003**                                                                              | **132%**            |
+| Sales Tax Rate                  | [6.5%](https://www.avalara.com/taxrates/en/state-rates/ohio/cities/cincinnati/) | [8.5%](https://www.avalara.com/taxrates/en/state-rates/california/cities/san-francisco/) | 2 basis points      |
+| **Sales Tax**                   | **$1,826**                                                                      | **$3,145**                                                                               | **172%**            |
 
 ## The Extra
 
@@ -119,11 +122,11 @@ get into the FAANGs. What do they pay?
 As of January 28, Levels estimates that (with the 35% haircut) you'll get:
 
 * Amazon SDE I: $117K salary + $9.1K stock = $126.1K
-* Facebook E3: $113K salary + $25.5K stock = $138.5K [^FB]
+* Facebook E3: $113K salary + $25.5K stock = $138.5K [^9]
 * Apple ICT2: $121K salary + $19.8K stock = $140.8K
-* Yelp IC1: $125K salary + $19.5K stock = $144.5K [^Yelp]
+* Yelp IC1: $125K salary + $19.5K stock = $144.5K [^10]
 * Google L3: $124K salary + $28.3K stock = $152.3K
-* LinkedIn SWE: $137K salary + $33.6K stock = $170.6K [^LinkedIn]
+* LinkedIn SWE: $137K salary + $33.6K stock = $170.6K [^11]
 
 It's notable that all of them are about the same value. Obviously, the 
 transparency has helped quite a bit here to get all of these companies
@@ -145,7 +148,7 @@ you get promoted.
 
 Obviously, your ceiling is higher in SF. A Google L6 brings home $339.7K
 with 10-15 years experience while someone in Cincinnati is probably only
-getting $150K[^Cincy15Years] after 15 years and that might be optimistic. But even
+getting $150K[^12] after 15 years and that might be optimistic. But even
 though your ceiling is higher, so much of that still goes away to housing,
 groceries, taxes, and everything else that it's not the massive life
 upgrade most seem to think it is. Case in point: CNN Money estimates $150K
@@ -199,17 +202,44 @@ almost impossible for a new grad and you're competing against 100x the
 people there. If you want to be at the center of the tech world, however,
 what option do you have?
 
-^[1]: https://www.zillow.com/oakland-ca/home-values/
-^[2]: https://www.zillow.com/cincinnati-oh/home-values/
-^[3]: COLA sourced from [Bankrate](https://www.bankrate.com/calculators/savings/moving-cost-of-living-calculator.aspx), which gave 
-`$155,247.52`, [CNN Money](https://money.cnn.com/calculator/pf/cost-of-living/), which said `$166,934`, 
-[NerdWallet](https://www.nerdwallet.com/cost-of-living-calculator/compare/cincinnati-oh-vs-san-francisco-ca), which said `$160,840`,
-and [PayScale](https://www.payscale.com/cost-of-living-calculator/California-San-Francisco/Ohio-Cincinnati), calculating it as `$156,000`. Resulting average is `$159,755.38`.
-^[4]: Groceries typically do not have sales tax applied.
-^[5]: Calculated using [SmartAsset's Property Tax Calculator](https://smartasset.com/taxes/property-taxes)
-^[6]: Before any cries of Prop 13, property tax on home purchases results in a reassessment when sold.
-^[7]: Calculated using SmartAsset's [Ohio](https://smartasset.com/taxes/ohio-tax-calculator) and  
-^[8]: SF currently has a combination of a ~0.3% payroll tax and a gross
-receipts tax. While I could add this in as money you could have, it's
-in enough flux that I've declined to add it in.
-^[9]: https://www.cnbc.com/2015/07/20/how-to-avoid-the-tax-traps-of-restricted-stock-units.html
+[^1]: [https://www.zillow.com/oakland-ca/home-values/](https://www.zillow.com/oakland-ca/home-values/)
+
+[^2]: [https://www.zillow.com/cincinnati-oh/home-values/](https://www.zillow.com/cincinnati-oh/home-values/)
+
+[^3]: 
+	COLA sourced from [Bankrate](https://www.bankrate.com/calculators/savings/moving-cost-of-living-calculator.aspx), which gave 
+	`$155,247.52`, [CNN Money](https://money.cnn.com/calculator/pf/cost-of-living/), which said `$166,934`, 
+	[NerdWallet](https://www.nerdwallet.com/cost-of-living-calculator/compare/cincinnati-oh-vs-san-francisco-ca), which said `$160,840`,
+	and [PayScale](https://www.payscale.com/cost-of-living-calculator/California-San-Francisco/Ohio-Cincinnati), calculating it as `$156,000`. 
+	Resulting average is `$159,755.38`.
+
+[^4]: Groceries typically do not have sales tax applied.
+
+[^5]: Calculated using [SmartAsset's Property Tax Calculator](https://smartasset.com/taxes/property-taxes)
+
+[^6]: Before any cries of Prop 13, property tax on home purchases results in a reassessment when sold.
+
+[^7]: 
+	Calculated using SmartAsset's [Ohio](https://smartasset.com/taxes/ohio-tax-calculator) 
+	and [California](https://smartasset.com/taxes/ohio-tax-calculator) tax calculators. 
+
+[^8]: 
+	SF currently has a combination of a ~0.3% payroll tax and a gross
+	receipts tax. While I could add this in as money you could have, it's
+	in enough flux that I've declined to add it in.
+
+[^9]: 
+	Facebook is notorious for paying far higher in total comp, but Levels has them
+	coming in about even for new grad. Could be due to any number of things,
+	but we'll accept it for now.
+
+[^10]: Looks like Yelp is competitive with FAANG for new grad.
+
+[^11]: 
+	This is their baseline but *many* new hires have existing experience.
+	It's not Netflix's senior SWE tier, but definitely one notch above.
+
+[^12]: 
+	When examining StackOverflow's salary calculator, all of the above salaries
+	came in above the 75th percentile for SF new grads. It's not too much a stretch to
+	place us just above that for 15 years experience, I think.

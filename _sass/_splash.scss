@@ -186,19 +186,30 @@ input[type="submit"] {
 }
 
 .job {
-  -webkit-flex-basis: 50%;
-  flex-basis: 50%;
-  min-width: 30%;
-  flex: 1 1 50%;
+  -webkit-flex-basis: 33%;
+  flex-basis: 33%;
+  min-width: 300px;
+  max-width: 50%;
+  flex: 1 1 33%;
   padding: 1em;
 }
 
 .job-header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  .job-company, .job-company-container {
+      min-width: 200px;
+      margin-bottom: 3px;
+  }
 
   .job-company {
     padding-right: 5px;
+  }
+
+  .job-title {
+      margin-top: 0px;
   }
 }
 
@@ -311,6 +322,7 @@ $transition-type: ease;
   }
   .hero-text {
     padding: 0 2%;
+    width: 96%;
   }
 }
 
@@ -322,19 +334,18 @@ $transition-type: ease;
   .job, .project {
     min-width: 100%;
     display: block;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .project-text {
+      padding-left: 0;
+      padding-right: 0;
   }
   .project-image {
     max-width: 50%;
   }
 }
-
-// @media (min-width: 1024px) {
-//   .job {
-//     flex-basis: 33%;
-//     -webkit-flex-basis: 33%;
-//     flex: 1 1 33%;
-//   }
-// }
 
 .hero-container {
   background-color: #fff5e7;

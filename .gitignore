@@ -4,3 +4,6 @@ _site
 s3_website.yml
 
 .DS_Store
+
+debug_output.txt
+stdio.txt

@@ -1,11 +1,11 @@
 title: Kristian Snyder
-email: snyderkristian@gmail.com
+email: contact@kristiansnyder.com
 baseurl: / # the subpath of your site, e.g. /blog
 twitter_username: kristian_snyder
 github_username:  snyderks
 spotify_profile: https://open.spotify.com/user/knsnyder96
 my_name: Kristian
-description: What I've learned so far (and the silly stuff)
+description: Software developer
 
 plugins:
   - jekyll-sitemap

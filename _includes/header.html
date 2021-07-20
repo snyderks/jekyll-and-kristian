@@ -13,14 +13,6 @@
     </a>
   </div>
   <ul class="navbar">
-    <li class="nav-item">{% if page.url == "/blog" %}<a href="#">
-                         {% else %}<a href="{{site.url}}{{site.baseurl}}/blog">
-                         {% endif %}
-                         Blog</a></li>
-    <li class="nav-item">{% if page.url == "/" %}<a href="#projects">
-                         {% else %}<a href="{{site.url}}{{site.baseurl}}#projects">
-                         {% endif %}
-                         Projects</a></li>
     <li class="nav-item">{% if page.url == "/" %}<a href="#experience">
                          {% else %}<a href="{{site.url}}{{site.baseurl}}#experience">
                          {% endif %}

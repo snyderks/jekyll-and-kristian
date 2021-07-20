@@ -136,6 +136,10 @@ hr {
   width: 100%;
 }
 
+.dark-container hr {
+  background-color: $light-text-color;
+}
+
 small {
   font-size: smaller;
   color: $grey-color;

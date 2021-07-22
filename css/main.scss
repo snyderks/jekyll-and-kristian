@@ -49,6 +49,7 @@ $dark-accent: #4e3701;
 $x-dark-accent: #332401;
 $xl-dark-accent: #201700;
 
+$link-color: rgb(0, 20, 63);
 $link-rollover: rgb(98, 148, 255);
 
 $header-height: 72px;
@@ -73,8 +74,8 @@ $splash-bg: #fff5e7;
 $dark-bg-color: rgb(50, 50, 60);
 $header-bg: #fff5e7;
 $brand-color: $accent-3;
-$link-color-light: $accent-4;
-$link-color-dark: $deep-accent;
+$link-color-light: $deep-accent;
+$link-color-dark: $dark-accent;
 $grey-color: $dark-accent;
 $grey-color-light: lighten($grey-color, 25%);
 $grey-color-light-small: lighten($grey-color, 15%);
@@ -104,7 +105,7 @@ html {
 }
 
 a {
-  color: $link-color-dark;
+  color: $link-color;
 }
 
 a:hover {

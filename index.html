@@ -60,7 +60,7 @@ working in full-stack Vue/Node/Java development at GE Aviation."
     </div> -->
     <div class="dark-container">
       <div class="body-width-container">
-        <h1 class="section-header"><a name="experience"></a>Experience</h1>
+        <h2 class="section-header"><a name="experience"></a>Experience</h2>
         <div class="flex-container-center">
           {% assign jobs = site.jobs | sort: 'start-date' | reverse %}
           {% for job in jobs %}
@@ -68,12 +68,12 @@ working in full-stack Vue/Node/Java development at GE Aviation."
             <div class="job-header">
                 <h3 class="job-company">{{job.company}}</h3>
                 <div class="flex-container-space-between job-company-container">
-                  <span class="flex-child"><span><h6 class="job-title">{{job.title}}</h6></span>
+                  <span class="flex-child"><span><h4 class="job-title">{{job.title}}</h4></span>
                   <span class="flex-child" class="job-time">{{job.time}}</span>
                 </div>
             </div>
             <hr>
-            <h5 class="tools-header">Tools/Languages</h5>
+            <h4 class="tools-header">Tools/Languages</h4>
             <div class="flex-container-left flex-container-tags">
               {% for tool in job.tools %}
               <span class="job-tool">

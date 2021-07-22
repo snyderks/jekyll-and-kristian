@@ -1,6 +1,4 @@
-<header style=
-  "{% if page.url == '/' %}background-color: transparent;{% endif %}"
->
+<header>
   <div class="slash first-slash"></div>
   <div class="slash second-slash"></div>
   <div class="slash third-slash"></div>
@@ -12,7 +10,7 @@
       <span class="bottom-right-logo">S</span>
     </a>
   </div>
-  <ul class="navbar">
+  <ul class="navbar" role="navigation">
     <li class="nav-item">{% if page.url == "/" %}<a href="#experience">
                          {% else %}<a href="{{site.url}}{{site.baseurl}}#experience">
                          {% endif %}

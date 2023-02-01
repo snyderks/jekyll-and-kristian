@@ -6,7 +6,7 @@ tools:
  - TensorFlow
  - Python
 start-date: 2020-06-15
-time: June 2020 - Present
+time: Summer 2018 - Summer 2020
 ---
 
 - Developed deep CNN to predict risk of back injury (90.6% accuracy) in lifting objects using sensor-based motion data

@@ -7,7 +7,7 @@ tools:
  - Spring Boot
  - AWS
 start-date: 2020-06-15
-time: June 2020 - February 2021
+time: Summer 2020 - Winter 2020
 ---
 
 - Organized and led development team of 6 members

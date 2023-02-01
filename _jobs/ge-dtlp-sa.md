@@ -8,7 +8,7 @@ tools:
  - Network Security
  - TCP/IP
 start-date: 2021-02-01
-time: February 2021 - Present
+time: Winter 2020 - Fall 2021
 ---
 
 - Developed operational technology supporting network for CMMC military compliance, *enabling billions in new contracts in 2022*

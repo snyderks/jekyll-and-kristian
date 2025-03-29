@@ -10,5 +10,6 @@ start-date: 2021-08-15
 time: Fall 2021 - Present
 ---
 
-- Improving and maintaining Cash App Taxes’s desktop login system that serves millions of customers per year
-- Developing the software to enter and calculate taxes for thousands of residents in multiple states
+- Designed and developed a high-scale, inter-cloud taxes user data system serving thousands of requests per second to all Cash App users
+- Directly responsible for state tax return entry and calculation for five states in Cash App Taxes
+- Improved and maintained a legacy desktop login system that served millions of customers per year
